@@ -1,0 +1,8 @@
+---
+- name: update VM RAM
+  vcd_vapp_vm_nic:
+    vm_name: "{{ item.name }}"
+    vapp: "{{ item.vapp }}"
+    vdc: "{{ item.vdc }}"
+    network: "{{ item.network }}"
+    state: "present"

@@ -1,0 +1,57 @@
+vapps:
+  - name: "TCASASTAS99FI-01"
+    description: "TAS"
+    catalog: "fi_reference"
+  - name: "TCASPGWHA99FI-01"
+    description: "External HAProxy"
+    catalog: "fi_reference"
+  - name: "TCASPGWAS99FI-01"
+    description: "PGW App"
+    catalog: "fi_reference"
+  - name: "TCASDBDB99FI-01"
+    description: "DB"
+    catalog: "fi_reference"
+  - name: "TCASASREM99FI-01"
+    description: "REM"
+    catalog: "fi_reference"
+  - name: "TCASDBHA99FI-01"
+    description: "DB HAProxy"
+    catalog: "fi_reference"
+  - name: "TCASASSAS99FI-01"
+    description: "SAS"
+
+
+vms:
+  - name: "TCASASTAS990FI-01-VM-01"
+    cpus: 2
+    cores: 2
+    memory: 4096
+    target_vapp: "TCASASTAS99FI-01"
+    source_catalog_name: "fi_reference"
+    source_template_name: "tas_ova"
+    ip_allocation_mode: "manual"
+    - nics
+        - { ip: "", netmask: "" }
+        - { ip: "", netmask: "" }
+        - { ip: "", netmask: "" }
+        - { ip: "", netmask: "" }
+    hdd: 300
+  - name: "TCASASTAS990FI-01-VM-02"
+    cpus: 2
+    cores: 2
+    memory: 4096
+    target_vapp: "TCASASTAS99FI-01"
+    source_catalog_name: "fi_reference"
+    source_template_name: "tas_ova"
+    ip_allocation_mode: "manual"
+    hdd: 300
+
+catalogs:
+  - name: "fi_reference"
+    description: "Finland Reference"
+
+vswitches:
+  - name: "vswitch01"
+    nics:
+      - name: nic01
+        ip: 10.10.10.10/24

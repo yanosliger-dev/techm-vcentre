@@ -1,0 +1,6 @@
+---
+- hosts:
+    - vcentre_host
+  become: yes
+  roles:
+    role: setup_vm

@@ -1,0 +1,7 @@
+---
+- name: Include create vm
+  include: setup_vm.yml
+  tags: [ day0, setup_vm ]
+- name: Include power on vm
+  include: power_on.yml
+  tags: [ day0, power_on ]

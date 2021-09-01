@@ -1,0 +1,7 @@
+---
+- name: Include create vapp
+  include: setup_vapp.yml
+  tags: [ day0, setup_vapp ]
+- name: Include power on vapp
+  include: power_on.yml
+  tags: [ day0, power_on ]

@@ -1,0 +1,10 @@
+---
+- hosts: '*'
+  roles:
+    - setup_catalogs
+    - setup_vswitch
+    - setup_vapp
+    - setup_vm
+    - update_vm
+    - setup_nics
+    - setup_storage

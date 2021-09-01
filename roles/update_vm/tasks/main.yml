@@ -1,0 +1,8 @@
+---
+- name: Include update cpu
+  include: update_vm_cpu.yml
+  tags: [ day0, update_cpu ]
+- name: Include update mem
+  include: update_vm_mem.yml
+  tags: [ day0, update_mem ]
+

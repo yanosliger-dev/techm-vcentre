@@ -1,0 +1,7 @@
+---
+ - name: power on vapp
+   vcd_vapp:
+	vapp_name: "{{ item.vapp_name }}"
+	vdc: "{{ item.vdc }}"
+	operation: "poweron"
+   with_items: "{{ vapps }}"

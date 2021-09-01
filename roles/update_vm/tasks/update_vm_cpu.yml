@@ -1,0 +1,9 @@
+---
+- name: update VM cpu
+  vcd_vapp_vm:
+    target_vm_name: "{{ item.name }}"
+    target_vapp: "{{ item.vapp }}"
+    target_vdc: "{{ item.vdc }}"
+    virtual_cpus: "{{ item.cpus }}"
+    cores_per_socket: "{{ item.cores }}"
+    state: "update"
