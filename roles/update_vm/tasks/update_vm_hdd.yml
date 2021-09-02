@@ -1,0 +1,8 @@
+---
+- name: update VM hdd
+  vcd_vapp_vm_disk:
+    vm_name: "{{ item.name }}"
+    vapp: "{{ item.vapp }}"
+    vdc: "{{ item.vdc }}"
+    size: "{{ item.hdd }}"
+    state: "present"

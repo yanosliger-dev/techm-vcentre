@@ -5,4 +5,10 @@
 - name: Include update mem
   include: update_vm_mem.yml
   tags: [ day0, update_mem ]
+- name: Include update nic
+  include: update_vm_nic.yml
+  tags: [ day0, update_nic ]
+- name: Include update hdd
+  include: update_vm_hdd.yml
+  tags: [ day0, update_hdd ]
 
