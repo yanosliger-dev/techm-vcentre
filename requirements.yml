@@ -1,0 +1,2 @@
+- src: https://github.com/vmware/pyvcloud
+- src: https://github.com/vmware/ansible-module-vcloud-director

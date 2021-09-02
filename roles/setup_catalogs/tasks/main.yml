@@ -1,0 +1,4 @@
+---
+- name: Include create catalogs
+  include: setup_catalogs.yml
+  tags: [ day0, setup_catalogs ]
