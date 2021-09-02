@@ -1,0 +1,4 @@
+---
+- name: Include create vswitch
+  include: setup_vswitch.yml
+  tags: [ day0, setup_vswitch ]

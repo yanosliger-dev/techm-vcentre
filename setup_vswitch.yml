@@ -3,4 +3,4 @@
     - vcentre_host
   become: yes
   roles:
-    role: setup_vapp
+    role: setup_vswitch

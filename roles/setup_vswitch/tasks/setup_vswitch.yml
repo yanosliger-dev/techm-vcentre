@@ -1,0 +1,8 @@
+---
+- name: Create Vapp
+  vapp_name: "{{ item.name }}"
+  description: "{{ item.description }}"
+  catalog_name: "{{ item.catalog }}"
+  ip_allocation_mode: 'manual';
+  network_adapter_type: vmxnet3
+  state: present
